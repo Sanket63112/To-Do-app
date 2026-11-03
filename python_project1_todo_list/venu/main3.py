@@ -2,7 +2,7 @@ message = "type add or show or exit or edit or complete:"
 
 from functions import get_todo, write_todo
 import time
-print('The current time is below')
+
 now = time.strftime('%B %d, %Y, %H:%M:%S')
 print("It's ",now)
 
