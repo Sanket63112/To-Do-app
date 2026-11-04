@@ -19,18 +19,18 @@ while True:
 
                     #or
 
-            with open('../todos.txt', 'r') as file:
+            with open('todos.txt', 'r') as file:
                 todos = file.readlines()
 
             todos.append(todo)
 
-            with open('../todos.txt', 'w') as file:
+            with open('todos.txt', 'w') as file:
                 file.writelines(todos)
 
         case 'show':
             # print(todos)
             # for i in range(len(todos)):
-            with open('../todos.txt', 'r') as file:
+            with open('todos.txt', 'r') as file:
                 todos = file.readlines()
 
             # new_todo = [ item.strip('\n') for item in todos]
@@ -42,24 +42,24 @@ while True:
             number = int(input("enter the index : "))
             number = number - 1
 
-            with open('../todos.txt', 'r') as file:
+            with open('todos.txt', 'r') as file:
                 todos = file.readlines()
 
             new_todo = input(message)
             todos[number] = new_todo
 
-            with open('../todos.txt', 'w') as file:
+            with open('todos.txt', 'w') as file:
                 file.writelines(todos)
         case 'complete':
             number = int(input("enter the index : "))
             number = number - 1
 
-            with open('../todos.txt', 'r') as file:
+            with open('todos.txt', 'r') as file:
                 todos = file.readlines()
             completed_todo = todos[number].strip('\n')
             todos.pop(number)
 
-            with open('../todos.txt', 'w') as file:
+            with open('todos.txt', 'w') as file:
                 file.writelines(todos)
             print(f'Great!, you have completed - {completed_todo} task!')
         case 'exit':
