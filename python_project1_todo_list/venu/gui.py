@@ -7,7 +7,7 @@ sg.theme('black')
 clock = sg.Text('',key='clock')
 label = sg.Text('Enter a To-Do')
 input_box = sg.InputText(tooltip='Enter a to-do', key='todo')
-add_button = sg.Button('Add')
+add_button = sg.Button(size=2, image_source='add.png', mouseover_colors='DarkBlue1', tooltip='Add Todo', key='Add')
 list_box = sg.Listbox(functions.get_todo(), key='todos',
                       enable_events=True, size=[45, 10])
 edit_button = sg.Button('Edit')
