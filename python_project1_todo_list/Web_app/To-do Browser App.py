@@ -3,7 +3,7 @@ import functions
 
 # activate venv -  .\venv\Scripts\Activate.ps1
 
-print('Starting App')
+
 todos = functions.get_todo()
 
 
@@ -27,6 +27,3 @@ for index,todo in enumerate(todos):
         st.rerun()
 
 st.text_input(label='todo:', placeholder='Add a new to-do', key='new_todo', on_change=add_todo)
-st.session_state
-
-print('closing app')
