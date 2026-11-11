@@ -1,13 +1,18 @@
 import functions
 import FreeSimpleGUI as sg
 import time
+import os
+
+if not os.path.exists('todos.txt'):
+    with open('todos.txt', 'w') as file:
+        pass
 
 sg.theme('black')
 
 clock = sg.Text('',key='clock')
 label = sg.Text('Enter a To-Do')
 input_box = sg.InputText(tooltip='Enter a to-do', key='todo')
-add_button = sg.Button(size=2, image_source='add.png', mouseover_colors='DarkBlue1', tooltip='Add Todo', key='Add')
+add_button = sg.Button('Add')
 list_box = sg.Listbox(functions.get_todo(), key='todos',
                       enable_events=True, size=[45, 10])
 edit_button = sg.Button('Edit')
@@ -25,7 +30,7 @@ window = sg.Window('My To-Do App',
                    font=('Poppins', 15))
 
 while True:
-    event, value = window.read(timeout=1000)
+    event, value = window.read(timeout=100)
     window['clock'].update(value=time.strftime('%d %b %Y %H:%M:%S'))
     print(event)
     print(value)
