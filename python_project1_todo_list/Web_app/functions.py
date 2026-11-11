@@ -1,7 +1,6 @@
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
-FILENAME = 'todos.txt'
+FILENAME = Path(__file__).resolve().parent / "todos.txt"
 
 
 def get_todo(filename=FILENAME):
