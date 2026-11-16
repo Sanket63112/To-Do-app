@@ -15,7 +15,7 @@ def add_todo():
 
 
 st.title('My To-do App')
-st.subheader("Welcome and try our To-do's app")
+st.subheader("Start your day effectively")
 st.write('We can add, edit, track todos or complete item in our list with this easy app')
 
 for index,todo in enumerate(todos):
