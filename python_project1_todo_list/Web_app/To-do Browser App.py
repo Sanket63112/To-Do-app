@@ -26,4 +26,4 @@ for index,todo in enumerate(todos):
         del st.session_state[todo]
         st.rerun()
 
-st.text_input(label='todo:', placeholder='Add a new to-do', key='new_todo', on_change=add_todo)
+st.text_area(label='todo:', placeholder='Add a new to-do', key='new_todo', on_change=add_todo)
